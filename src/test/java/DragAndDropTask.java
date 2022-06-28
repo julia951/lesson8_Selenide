@@ -24,5 +24,7 @@ public class DragAndDropTask {
         $("#column-a").dragAndDropTo($("#column-b"));
 
         $("#column-b").shouldHave(text("A"));
+        $("#column-a").shouldHave(text("B"));
+
     }
 }

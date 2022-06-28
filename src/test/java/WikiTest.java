@@ -1,4 +1,5 @@
 import com.codeborne.selenide.Configuration;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -7,6 +8,12 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class WikiTest {
+
+    @BeforeAll
+    static void setUp() {
+    //    Configuration.baseUrl = "https://github.com/selenide/selenide";
+        Configuration.browserSize = "1920x1080";
+    }
 
     @Test
     @DisplayName("Проверка наличия раздела JUnit5 в GitHUb/Selenide")
